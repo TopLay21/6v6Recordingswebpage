@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6v6webpage</title>
+    <style>
+        body {
+            background-color: yellow;
+        }
+        
+        .p {
+          font-family: arial;
+          font-size: 30px; 
+          text-align: center;
+        }
+
+        .slider-container {
+            width: 500px; /* 컨테이너의 가로 폭을 100%로 설정 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .bxslider {
+            width: 80%; /* 슬라이더의 가로 폭을 설정 (변경 가능) */
+            max-width: 1200px; /* 최대 폭을 설정하여 화면이 작아질 때 너무 커지지 않도록 제한 */
+            margin: 0 auto; /* 가운데 정렬을 위해 좌우 마진을 자동으로 설정 */
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="jquery-ui-1.13.2/jquery-ui.js"></script>
+    <script src="jquery-ui-1.13.2/jquery-ui.theme.js"></script>
+    <script src="jquery-ui-1.13.2/external/jquery/jquery.js"></script>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $(".slider").bxSlider();
+      });
+
+      $(function(){
+        $('.bxslider').bxSlider({
+            auto: true,
+            autoControls: true,
+            stopAutoOnClick: true,
+            pager: true,
+            mode: 'fade',
+            slideWidth: 600,
+            adaptiveHeight: true,
+	        captions: true
+         });
+       });
+    </script>
+</head>
+<body>
+    <div class="p">
+        <p>Welcome to 6v6 Recordings</p>
+    </div>
+    <div class="slider-container">
+        <div class="bxslider">
+            <a href="https://www.youtube.com/@wapddi">
+                <img src="6v6.jpg" alt="6v6" title="Go to my Youtube channel">
+            </a>
+            <a href="https://www.instagram.com/wapddi/?hl=ko">
+                <img src="https://i.namu.wiki/i/qr8n7rI4CE3CYqXuK3m4mSU5NxRhDVQwxwWT5nvEWdNj87nDQN4z5dlrafWpdCsUpY8uqYdQ-wBVSItyF-hKp2xoHkIgogrnQnh1htDIGWmGrLxvTu6v22ATko70RItQHIsDI-Lh4_p5Ipa0VBNdfA.webp" alt="wapddi" title="Go to my Instagram page">
+            </a>
+            <a href="https://marpple.shop/kr/wapddi">
+                <img src="https://image1.marpple.co/files/u_2338572/2023/1/original/04980b65d74b58070ef027e21bbe76240b9136961.png?w=1200&f=webp" alt="marplewapddi" title="Go to my marple shop">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
