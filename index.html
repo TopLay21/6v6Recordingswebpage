@@ -2,16 +2,16 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>6v6webpage</title>
     <style>
         body {
             background-color: yellow;
         }
-        
+
         .p {
           font-family: arial;
-          font-size: 30px; 
+          font-size: 28px;
           text-align: center;
         }
 
@@ -26,6 +26,25 @@
             width: 80%; /* 슬라이더의 가로 폭을 설정 (변경 가능) */
             max-width: 1200px; /* 최대 폭을 설정하여 화면이 작아질 때 너무 커지지 않도록 제한 */
             margin: 0 auto; /* 가운데 정렬을 위해 좌우 마진을 자동으로 설정 */
+        }
+
+        @media (max-width: 768px) {
+            /* 모바일 환경에서만 적용될 스타일 */
+            .slider-container {
+                width: 75%; /* 모바일 환경에서는 100% 폭으로 설정 */
+            }
+            .bxslider {
+                width: 90%; /* 모바일 환경에서는 슬라이더 폭을 줄임 */
+                max-width: none; /* 최대 폭 제한을 해제 */
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* 모바일 환경에서만 적용될 스타일 */
+            .p {
+                font-size: 18px; /* 모바일 환경에서 텍스트 크기를 줄임 */
+            }
+            /* 이전에 작성한 모바일 환경 슬라이더 스타일도 여기에 포함 */
         }
 
     </style>
